@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equic="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Kitchen Wheel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+    
+        <div>
+            <ul id="navbar">
+                <li><a href="index.htm">HOME</a></li>
+                <li><a href="about.htm">ABOUT US</a></li>
+                <li><a href="menu.htm">MENU</a></li>
+                <li><a href="order.html">ORDER FORM</a></li>
+                <li><a class="active" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="checkout">
+        <h2>Order Summary</h2>
+
+        <h3>Total Amount: ₱<span id="totalAmount"></span></h3>
+
+        <h4>Promo Code</h4>
+        <input type="text" id="promo" placeholder="Enter code">
+        <button onclick="applyPromo()">Apply</button>
+
+        <h4>Payment Mode</h4>
+        <input type="radio" name="payment" value="cash" required> Cash<br>
+        <input type="radio" name="payment" value="online"> Online Payment<br><br>
+
+        <button onclick="confirmOrder()">Confirm Order</button>
+    </section>
+
+    <script src="checkout.js"></script>
+</body>
+
+</html>
