@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Wheel | Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+<section id="header">
+    <a href="index.htm"><img src="img/logo.png" class="logo" alt="Kitchen Wheel logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.htm">HOME</a></li>
+            <li><a href="about.htm">ABOUT US</a></li>
+            <li><a href="menu.htm">MENU</a></li>
+            <li><a href="order.html">ORDER FORM</a></li>
+            <li><a class="active" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="checkout">
+    <h2>Order Summary</h2>
+
+    <div class="summary-box order-details">
+        <h4>Order Details</h4>
+        <div id="orderDetails"></div>
+    </div>
+
+    <div class="summary-box totals-box">
+        <p>Meals Subtotal: <strong>₱<span id="mealSubtotal">0.00</span></strong></p>
+        <p>Shipping Fee: <strong>₱<span id="shippingAmount">0.00</span></strong></p>
+        <p>Promo Discount: <strong>- ₱<span id="discountAmount">0.00</span></strong></p>
+        <p class="grand-total">Final Total: <strong>₱<span id="totalAmount">0.00</span></strong></p>
+    </div>
+
+    <div class="promo-section">
+        <h4>Promo Code</h4>
+        <input type="text" id="promo" placeholder="Enter code">
+        <button type="button" id="applyPromoBtn">Apply Promo</button>
+        <p id="promoMessage" class="status-message"></p>
+    </div>
+
+    <div class="payment-section">
+        <h4>Payment Mode</h4>
+            <label><input type="radio" name="payment" value="Cash"> Cash</label> <br>
+            <label><input type="radio" name="payment" value="Online Payment"> Online Payment</label>
+    </div>
+    <button type="button" id="confirmOrderBtn">Proceed to Payment</button>
+</section>
+<script src="checkout.js"></script>
+</body>
+</html>
